@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebSocket Demonstration</title>
+    <style>
+      h3, h4, p {
+        font-family: serif;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form__row {
+        display: flex;
+        margin-bottom: 15px;
+      }
+
+      label {
+        width: 25px;
+      }
+
+      input[type=submit] {
+        background-color: #2f9e3a;
+        border: 1px solid #d5d9d9;
+        border-radius: 8px;
+        box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: serif;
+        font-size: 13px;
+        line-height: 29px;
+        padding: 0 10px 0 11px;
+        position: relative;
+        text-align: center;
+        touch-action: manipulation;
+        vertical-align: middle;
+        width: 100px;
+        margin-left: 60px;
+      }
+    </style>
+    <style>
+      table {
+        display: none;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      </style>
+
+  </head>
+  <body>
+    <h3>Радиоактивный распад</h3>
+    <h4>В результате экспериментов, Ф. Содди и Э. Резерфорд вывели закон радиоактивного распада, который описывается дифференциальным уравнением:</h4>
+    <p><img src="https://i.imgur.com/V9XoYIm.png"></p>
+    <h4>Введите значения:</h4>
+
+    <form id="form" class="form">
+      <div class="form__row">
+        <label for="a">a</label>
+        <input type="text" id="a" required />
+      </div>
+
+      <div class="form__row">
+        <label for="u0">U0</label>
+        <input type="text" id="u0" required />
+      </div>
+
+      <div class="form__row">
+        <label for="T">T</label>
+        <input type="text" id="T" required />
+      </div>
+
+      <div class="form__row">
+        <input type="submit" value="Рассчитать" />
+      </div>
+    </form>
+
+    <p id="result"></p>
+
+    <table id="table">
+      <tr>
+        <th>t</th>
+        <th>U</th>
+      </tr>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="../../grafica.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
